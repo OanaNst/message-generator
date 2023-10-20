@@ -37,8 +37,20 @@ const msgPeople = [
   "A toxic relationship will unravel, demanding you to set healthy boundaries.",
 ];
 
+const luckMsg = document.getElementById("luck-prediction");
+const moneyMsg = document.getElementById("money-prediction");
+const peopleMsg = document.getElementById("people-prediction");
+
 const randomInt = () => Math.floor(Math.random() * 10);
 
-console.log(msgLuck[randomInt()]);
-console.log(msgMoney[randomInt()]);
-console.log(msgPeople[randomInt()]);
+//const button = document.getElementById("generatePrediction");
+
+const doPrediction = () => {
+  luckMsg.innerHTML = `🍀 ${msgLuck[randomInt()]}`;
+  moneyMsg.innerHTML = `💰 ${msgMoney[randomInt()]}`;
+  peopleMsg.innerHTML = `👤 ${msgPeople[randomInt()]}`;
+};
+
+//console.log(msgLuck[randomInt()]);
+//console.log(msgMoney[randomInt()]);
+//console.log(msgPeople[randomInt()]);

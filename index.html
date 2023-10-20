@@ -12,25 +12,29 @@
     </header>
     <main>
       <div class="container">
-        <div class="luck-container">
-          <p>How does your luck look today?</p>
-          <p id="luck-prediction">Placeholder text</p>
+        <div class="prediction">
+          <p>How does your luck look like today?</p>
+          <p id="luck-prediction">🍀</p>
         </div>
-        <div class="money-container">
+        <div class="prediction">
           <p>Will you be dirt-poor or fabulously wealthy?</p>
-          <p id="money-prediction">Placeholder text</p>
+          <p id="money-prediction">💰</p>
         </div>
-        <div class="people-container">
+        <div class="prediction">
           <p>Who will cross your path?</p>
-          <p id="people-prediction">Placeholder text</p>
+          <p id="people-prediction">👤</p>
         </div>
-        <button id="generatePrediction">Predict!</button>
+        <button id="generatePrediction" onclick="doPrediction()">
+          Predict!
+        </button>
       </div>
     </main>
     <footer>
       <p>
-        Made by <a href="https://github.com/OanaNst" target="_blank">OanaNst</a>
+        Made by
+        <a href="https://github.com/OanaNst" target="_blank">OanaNst</a>
       </p>
     </footer>
+    <script src="app.js"></script>
   </body>
 </html>

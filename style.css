@@ -49,7 +49,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 30vh;
+  height: 25vh;
 }
 
 h1 {
@@ -63,7 +63,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 55vh;
+  height: 60vh;
 }
 
 .container {
@@ -72,18 +72,25 @@ main {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
 }
 
-div.container * {
-  background-color: #415a77;
+.prediction {
   padding: 10px 20px;
+  border: 1px solid #e0e1dd;
   border-radius: 5px;
+  flex-basis: 50%;
+  font-size: 1.2rem;
+}
+
+div.prediction * {
+  margin-bottom: 10px;
 }
 
 #generatePrediction {
   flex-basis: 50%;
   border: 1px solid #e0e1dd;
+  border-radius: 5px;
   background-color: #1b263b;
   color: #e0e1dd;
   font-family: Georgia, "Times New Roman", Times, serif;
