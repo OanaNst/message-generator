@@ -9,6 +9,7 @@ const msgLuck = [
   "Luck favors the bold and the persistent.",
   "Sometimes, bad luck can lead to great lessons.",
   "Count your blessings; luck is on your side.",
+  "11) luck",
 ];
 
 const msgMoney = [
@@ -22,6 +23,7 @@ const msgMoney = [
   "A costly mistake may drain your finances, creating a turbulent financial future.",
   "Prudent decisions will magnetize money, ensuring a future of opulence and comfort.",
   "An unforeseen financial disaster could shake the foundation of your monetary security.",
+  "11) money",
 ];
 
 const msgPeople = [
@@ -35,20 +37,28 @@ const msgPeople = [
   "A challenging individual will disrupt your peace, requiring patience and resilience.",
   "A long-lost family member will reconnect, bringing harmony and unity.",
   "A toxic relationship will unravel, demanding you to set healthy boundaries.",
+  "11) people",
+  "12) people",
+  "13) people",
 ];
 
-const luckMsg = document.getElementById("luck-prediction");
-const moneyMsg = document.getElementById("money-prediction");
-const peopleMsg = document.getElementById("people-prediction");
+//const randomIntLuck = () => Math.floor(Math.random() * (msgLuck.length - 1));
+//const randomIntMoney = () => Math.floor(Math.random() * (msgMoney.length - 1));
+//const randomIntPeople = () =>
+//  Math.floor(Math.random() * (msgPeople.length - 1));
 
-const randomInt = () => Math.floor(Math.random() * 10);
-
-//const button = document.getElementById("generatePrediction");
+const randomIndex = (arr) => Math.floor(Math.random() * (arr.length - 1));
+const randomMsg = (msgArr) => msgArr[randomIndex(msgArr)];
 
 const doPrediction = () => {
-  luckMsg.innerHTML = `🍀 ${msgLuck[randomInt()]}`;
-  moneyMsg.innerHTML = `💰 ${msgMoney[randomInt()]}`;
-  peopleMsg.innerHTML = `👤 ${msgPeople[randomInt()]}`;
+  // 🔎 #luck-prediction → DOM[#luck-prediction] → Reference to the DOM element → stored in the luckMsg
+  const luckMsg = document.getElementById("luck-prediction");
+  const moneyMsg = document.getElementById("money-prediction");
+  const peopleMsg = document.getElementById("people-prediction");
+
+  luckMsg.innerHTML = `🍀 ${randomMsg(msgLuck)}`;
+  moneyMsg.innerHTML = `💰 ${randomMsg(msgMoney)}`;
+  peopleMsg.innerHTML = `👤 ${randomMsg(msgMoney)}`;
 };
 
 //console.log(msgLuck[randomInt()]);
